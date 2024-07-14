@@ -10,7 +10,10 @@
       />
       <div class="tab-ctn">
         <div class="tabs" ref="tabs">
-          <div class="tab" :class="{ active: index === 0 }" @click.stop="change(0)">
+          <!-- <div class="tab" :class="{ active: index === 0 }" @click.stop="change(0)">
+            <span>热点</span>
+          </div> -->
+          <div class="tab" :class="{ active: index === 0 }">
             <span>热点</span>
           </div>
           <div class="tab" :class="{ active: index === 1 }" @click.stop="change(1)">
@@ -20,7 +23,10 @@
             <span>关注</span>
             <img src="../../../assets/img/icon/live.webp" class="tab2-img" />
           </div>
-          <div class="tab" :class="{ active: index === 3 }" @click.stop="change(3)">
+          <!-- <div class="tab" :class="{ active: index === 3 }" @click.stop="change(3)">
+            <span>经验</span>
+          </div> -->
+          <div class="tab" :class="{ active: index === 3 }">
             <span>经验</span>
           </div>
           <div class="tab" :class="{ active: index === 4 }" @click.stop="change(4)">
