@@ -1,5 +1,5 @@
 import resource from '../assets/data/resource.js'
-import posts6 from '@/assets/data/posts6.json'
+import posts6 from '@/assets/data/dataList.json'
 import { _fetch, cloneDeep, random } from '@/utils'
 import { BASE_URL, FILE_URL } from '@/config'
 import { useBaseStore } from '@/store/pinia'

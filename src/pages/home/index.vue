@@ -111,16 +111,16 @@
           v-model:index="state.navIndex"
         >
           <!--          <SlideItem></SlideItem>-->
-          <Slide0 :active="state.navIndex === 0 && state.baseIndex === 1" />
+          <!-- <Slide0 :active="state.navIndex === 0 && state.baseIndex === 1" /> -->
           <SlideItem>
-            <LongVideo :active="state.navIndex === 1 && state.baseIndex === 1" />
+            <LongVideo :active="state.navIndex === 0 && state.baseIndex === 1" />
           </SlideItem>
           <!--          <SlideItem></SlideItem>-->
-          <Slide2 :active="state.navIndex === 2 && state.baseIndex === 1" />
-          <SlideItem>
+          <Slide2 :active="state.navIndex === 1 && state.baseIndex === 1" />
+          <!-- <SlideItem>
             <Community :active="state.navIndex === 3 && state.baseIndex === 1" />
-          </SlideItem>
-          <Slide4 :active="state.navIndex === 4 && state.baseIndex === 1" />
+          </SlideItem> -->
+          <Slide4 :active="state.navIndex === 2 && state.baseIndex === 1" />
         </SlideHorizontal>
 
         <BaseFooter v-bind:init-tab="1" />
@@ -248,7 +248,7 @@ const isMobile = ref(/Mobi|Android|iPhone/i.test(navigator.userAgent))
 const state = reactive({
   active: true,
   baseIndex: 1,
-  navIndex: 4,
+  navIndex: 2,
   itemIndex: 0,
   test: '',
   recommendList: [],
