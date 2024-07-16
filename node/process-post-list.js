@@ -18,7 +18,7 @@ function formatDict(dir, name) {
   let inputData = JSON.parse(saveFileStr)
   map.push({
     userId: name,
-    list: inputData,
+    list: inputData
   })
   if (max < inputData.length) max = inputData.length
 }
@@ -43,5 +43,5 @@ data.map((v) => {
     v.author = u
   }
 })
-fs.writeFileSync('./posts6.json', JSON.stringify(data, null, 2))
+fs.writeFileSync('./dataList.json', JSON.stringify(data, null, 2))
 fs.writeFileSync('./posts.json', JSON.stringify(newList.slice(6), null, 2))

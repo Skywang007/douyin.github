@@ -4,14 +4,10 @@
       <span v-if="!isRefresh1" :class="{ active: currentTab === 1 }">首页</span>
       <img v-if="isRefresh1" src="../assets/img/icon/refresh1.png" alt="" class="refresh" />
     </div>
-    <div class="l-button">
-      <span v-if="!isRefresh2" :class="{ active: currentTab === 2 }">商城</span>
+    <div class="l-button" @click="refresh(2)">
+      <span v-if="!isRefresh2" :class="{ active: currentTab === 2 }">朋友</span>
       <img v-if="isRefresh2" src="../assets/img/icon/refresh1.png" alt="" class="refresh" />
     </div>
-    <!-- <div class="l-button" @click="refresh(2)">
-      <span v-if="!isRefresh2" :class="{ active: currentTab === 2 }">商城</span>
-      <img v-if="isRefresh2" src="../assets/img/icon/refresh1.png" alt="" class="refresh" />
-    </div> -->
     <div class="l-button" @click="tab(3)">
       <div class="add-ctn">
         <img src="../assets/img/icon/add-light.png" alt="" class="add" />
@@ -29,6 +25,7 @@
 
 <script>
 import bus, { EVENT_KEY } from '../utils/bus'
+import { _no } from '@/utils'
 
 export default {
   name: 'BaseFooter',
@@ -60,10 +57,12 @@ export default {
           this.$nav('/')
           break
         case 2:
-          this.$nav('/shop')
+          // this.$nav('/shop')
+          _no()
           break
         case 3:
-          this.$nav('/publish')
+          // this.$nav('/publish')
+          _no()
           break
         case 4:
           this.$nav('/message')

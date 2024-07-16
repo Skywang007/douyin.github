@@ -13,23 +13,17 @@
           <!-- <div class="tab" :class="{ active: index === 0 }" @click.stop="change(0)">
             <span>热点</span>
           </div> -->
-          <div class="tab" :class="{ active: index === 0 }">
-            <span>热点</span>
-          </div>
-          <div class="tab" :class="{ active: index === 1 }" @click.stop="change(1)">
+          <div class="tab" :class="{ active: index === 0 }" @click.stop="change(0)">
             <span>长视频</span>
           </div>
-          <div class="tab" :class="{ active: index === 2 }" @click.stop="change(2)">
+          <div class="tab" :class="{ active: index === 1 }" @click.stop="change(1)">
             <span>关注</span>
             <img src="../../../assets/img/icon/live.webp" class="tab2-img" />
           </div>
           <!-- <div class="tab" :class="{ active: index === 3 }" @click.stop="change(3)">
             <span>经验</span>
           </div> -->
-          <div class="tab" :class="{ active: index === 3 }">
-            <span>经验</span>
-          </div>
-          <div class="tab" :class="{ active: index === 4 }" @click.stop="change(4)">
+          <div class="tab" :class="{ active: index === 2 }" @click.stop="change(2)">
             <span>推荐</span>
           </div>
         </div>
@@ -175,6 +169,7 @@ export default {
             (tabWidth * 0.5 - indicatorWidth / 2)
         )
       }
+      console.log('init--->', this.lefts)
       this.indicatorSpace = this.lefts[1] - this.lefts[0]
       _css(this.indicatorRef, 'transition-duration', `300ms`)
       _css(this.indicatorRef, 'left', this.lefts[this.index] + 'px')

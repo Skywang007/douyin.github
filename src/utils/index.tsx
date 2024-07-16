@@ -365,7 +365,7 @@ export function _notice(val) {
 }
 
 export function _no() {
-  _notice('未实现')
+  _notice('暂未未实现，尽情期待')
 }
 
 /**
