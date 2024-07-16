@@ -151,7 +151,7 @@ watch(
         type: newVal === false ? EVENT_KEY.ITEM_STOP : EVENT_KEY.ITEM_PLAY
       })
     }, t)
-  },
+  },   
   { immediate: true }
 )
 
