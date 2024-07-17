@@ -22,7 +22,7 @@ import bus, { EVENT_KEY } from '@/utils/bus'
 import { useBaseStore } from '@/store/pinia'
 import { slideItemRender } from '@/utils'
 
-const props = defineProps({
+const props = defineProps({ 
   cbs: {
     type: Object,
     default() {
