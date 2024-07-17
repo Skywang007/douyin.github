@@ -79,7 +79,7 @@ function canNext(state, isNext) {
  * @param state
  */
 export function slideTouchStart(e, el, state) {
-  // console.log('start', state.name)
+  console.log('start=====', state)
   if (!checkEvent(e)) return
   _css(el, 'transition-duration', `0ms`)
   //记录起点坐标，用于move事件计算移动距离

@@ -196,6 +196,7 @@ export async function startMock() {
 
   mock.onGet(/video\/private/).reply(async (config) => {
     const page = getPage2(config.params)
+    console.log('private--res===',allRecommendVideos.slice(100, 110));
     return [
       200,
       {
@@ -307,7 +308,7 @@ export async function startMock() {
     const v = await r2.json()
     // let item = v.find(a => a.uid === '68310389333')
     // let item = v.find(a => a.uid === '59054327754')
-    const item = v.find((a) => a.uid === '2739632844317827')
+    const item = v.find((a) => a.uid === '73216533079')
     if (item) {
       return [200, { data: item, code: 200 }]
     }
